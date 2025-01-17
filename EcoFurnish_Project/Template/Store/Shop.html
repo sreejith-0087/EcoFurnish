@@ -1,0 +1,37 @@
+{% extends 'Home/Base.html' %}
+{% load static %}
+{% block title %} Shop {% endblock %}
+{% block content %}
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Store</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+
+
+        <div class="row">
+            {% for i in products %}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="#"> <img src="{{i.image.url}}" alt="Image" style="width:250px;height:350px;"></a>
+            <h3 class="text-dark"><a href="#">{{i.product}}</a></h3>
+            <p><span>Stock - {{i.stock}}</span></p>
+            <p class="price">Rs.{{i.price}}</p>
+          </div>
+            {% empty %}
+            <h2 style="text-align:center;color:#308126;">No Results Found</h2>
+            {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+
+{% endblock %}
+
