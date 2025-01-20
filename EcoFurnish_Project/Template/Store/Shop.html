@@ -13,21 +13,58 @@
 
     <div class="site-section">
       <div class="container">
-
-
-        <div class="row">
+          <div class="row g-4">
             {% for i in products %}
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="#"> <img src="{{i.image.url}}" alt="Image" style="width:250px;height:350px;"></a>
-            <h3 class="text-dark"><a href="#">{{i.product}}</a></h3>
-            <p><span>Stock - {{i.stock}}</span></p>
-            <p class="price">Rs.{{i.price}}</p>
-          </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="text-center item mb-4"
+                  style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 10px;">
+                    <span class="tag">Sale</span>
+                    <a href="#"> <img src="{{i.image.url}}" alt="Image" style="width:250px;height:350px;"></a>
+                    <h3 class="text-dark"><a href="#">{{i.product}}</a></h3>
+                    <p class="fa-solid fa-cart-flatbed">
+                        <span style="color: #BB3A3E;">Stock - {{i.stock}}</span>
+                    </p> <br>
+                    <div class="price-box mt-2" style="display: inline-block; padding: 5px 10px; border: 1px solid green; border-radius: 5px; background-color: orange; color: black; font-weight: bold;">
+                        Rs.{{i.price}}
+                    </div>
+                </div>
+            </div>
             {% empty %}
             <h2 style="text-align:center;color:#308126;">No Results Found</h2>
             {% endfor %}
+          </div>
+
+          <div class="pagination justify-content-center">
+            {% if products.paginator.num_pages > 1 %}
+                <ul class="pagination">
+                    {% if products.has_previous %}
+                       <li class="page-item">
+                           <a class="page-link" href="?page=1"> First</a>
+                       </li>
+                       <li class="page-item">
+                           <a class="page-link" href="?page={{ products.previous_page_number }}">previous</a>
+                       </li>
+                    {% endif %}
+
+                    {% for num in products.paginator.page_range %}
+                         <li class="page-item {% if num == products.number %}active{% endif %}">
+                             <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                         </li>
+                    {% endfor %}
+
+                    {% if products.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ products.next_page_number }}">Next</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ products.paginator.num_pages }}">Last</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {% endif %}
         </div>
+
+
 
       </div>
     </div>
