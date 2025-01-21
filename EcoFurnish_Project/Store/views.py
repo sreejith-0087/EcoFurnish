@@ -37,3 +37,7 @@ def Product_Search(request):
     else:
         result = []
     return render(request, 'Store/Shop.html', {'products': result})
+
+
+def Single_Details(request):
+    return render(request, 'Store/Shop_Details.html')
