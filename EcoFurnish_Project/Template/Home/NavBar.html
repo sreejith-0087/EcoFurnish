@@ -29,10 +29,14 @@
                 {% endfor %}
               </ul>
             </li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'Customer:logout' %}">Logout</a></li>
+            {% else %}
             <li><a href="{% url 'Customer:register' %}">Register</a></li>
             <li><a href="{% url 'Customer:login' %}">Login</a></li>
             <li><a href="{% url 'Store:about' %}">About</a></li>
             <li><a href="{% url 'Store:contact' %}">Contact</a></li>
+            {% endif %}
           </ul>
         </nav>
       </div>
@@ -43,6 +47,7 @@
         </a>
         <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
             class="icon-menu"></span></a>
+        <a href="#"><span class="fa-solid fa-user"></span></a>
       </div>
     </div>
   </div>
