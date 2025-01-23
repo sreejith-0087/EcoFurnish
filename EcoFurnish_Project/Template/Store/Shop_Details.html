@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a
-              href="shop.html">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Ibuprofen Tablets, 200mg</strong></div>
+              href="{% url 'Store:shop' %}">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{pro.product}}</strong></div>
         </div>
       </div>
     </div>
@@ -17,20 +17,53 @@
         <div class="row">
           <div class="col-md-5 mr-auto">
             <div class="border text-center">
-              <img src="images/product_07_large.png" alt="Image" class="img-fluid p-5">
+              <img src="{{pro.image.url}}" alt="Image" class="img-fluid p-5">
             </div>
           </div>
           <div class="col-md-6">
-            <h2 class="text-black">Ibuprofen Tablets, 200mg</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus
-              soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas,
-              distinctio, aperiam, ratione dolore.</p>
+            <h2 class="text-black" style="font-family: serif;">{{pro.product}}</h2>
+            <p style="font-family: monospace; color: #383050;">{{pro.description}}</p>
+
+            <p><strong class="fa-solid fa-cart-flatbed mt-3"> <span style="color:#BB3A3E;">Stock - {{pro.stock}}</span></strong></p>
+
+            <p><strong class="text h4" style="font-family: serif; color:#2A8737;">Rs.{{pro.price}}</strong></p>
 
 
-            <p><del>$95.00</del>  <strong class="text-primary h4">$55.00</strong></p>
+            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
 
+            <br><br>
+            <form method="post" action="{% url 'Store:feedback' pro.id %}">
+              {% csrf_token %}
+              <label class="text-black">Leave a Feedback</label>
+              <textarea name="Add_Feedback" class="form-control" required></textarea>
+              <div>
+                <input type="submit" value="Add Feedback" class="btn btn-teal-300">
+              </div>
+            </form>
 
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+            <br><br>
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0 text-white">All Feedbacks</h5>
+                    </div>
+                    <div class="card-body" style="max-height: 275px; overflow-y: auto;">
+                        {% if feedback_view %}
+                            <ul class="list-group">
+                                {% for feedback in feedback_view %}
+                                    <li class="list-group-item">
+                                        <p><span style="color:#343738;">{{ feedback.user.first_name }} {{ feedback.user.last_name }}</span></span><br>
+                                        <strong style="color:black;">{{ feedback.feedback }}</strong></p>
+                                        <small class="text-muted">Posted on {{ feedback.created_at|date:"F d, Y H:i" }}</small>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p>No feedback available for this product yet.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
 
           </div>
         </div>

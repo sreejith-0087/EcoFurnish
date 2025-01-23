@@ -10,6 +10,7 @@ urlpatterns = [
     path('shop/', Shop, name='shop'),
     path('category/<slug:link>', Shop, name='by_category'),
     path('product_search/', Product_Search, name='product_search'),
-    path('single_details/', Single_Details, name='single_details'),
+    path('single_details/<int:pro_id>/', Single_Details, name='single_details'),
+    path('addfeedback/<int:pro_id>', Add_Feedback, name='feedback'),
 ]
 

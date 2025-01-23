@@ -1,4 +1,6 @@
 from django.db import models
+from Customer.models import CustomerDetails
+
 
 # Create your models here.
 
@@ -18,4 +20,15 @@ class Furniture(models.Model):
 
     def __str__(self):
         return self.product
+
+
+class Feedback(models.Model):
+    user = models.ForeignKey(CustomerDetails, on_delete=models.CASCADE)
+    feedback = models.TextField()
+    product = models.ForeignKey(Furniture, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.user.first_name} {self.user.last_name}'
+
 

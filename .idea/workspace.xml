@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="">
+    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Register &amp; Login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/EcoFurnish_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/EcoFurnish_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop_Details.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop_Details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +84,30 @@
       <option name="presentableId" value="Default" />
       <updated>1737024711543</updated>
     </task>
+    <task id="LOCAL-00001" summary="Register &amp; Login">
+      <option name="closed" value="true" />
+      <created>1737545304421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737545304421</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Register &amp; Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register &amp; Login" />
   </component>
 </project>

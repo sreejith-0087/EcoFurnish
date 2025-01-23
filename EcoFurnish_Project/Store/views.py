@@ -1,9 +1,10 @@
-from django.db.models.expressions import result
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+from .models import Categories, Furniture, Feedback
+from Customer.models import CustomerDetails
 
-from . models import Categories, Furniture
 
 # Create your views here.
 
@@ -39,5 +40,27 @@ def Product_Search(request):
     return render(request, 'Store/Shop.html', {'products': result})
 
 
-def Single_Details(request):
-    return render(request, 'Store/Shop_Details.html')
+def Single_Details(request, pro_id):
+    ecofurnishsingle = Furniture.objects.get(id=pro_id)
+    feedback_list = Feedback.objects.filter(product_id=pro_id).order_by('-created_at')
+    return render(request, 'Store/Shop_Details.html', {'pro': ecofurnishsingle,
+                                                       'feedback_view':feedback_list})
+
+
+@login_required(login_url='Customer:login')
+def Add_Feedback(request, pro_id):
+    if request.method == 'POST':
+        fed = request.POST['Add_Feedback']
+        product = Furniture.objects.get(id=pro_id)
+        user = CustomerDetails.objects.get(id=request.user.id)
+        Feedback(user=user, feedback=fed, product=product).save()
+        return redirect('Store:single_details', pro_id)
+
+
+
+def Feedback_View(request, product_id):
+    feedback_list = Feedback.objects.filter(product_id=product_id).order_by('-created_at')
+    return render(request, 'Store/Shop_Details.html', {'feedback_view':feedback_list})
+
+
+
