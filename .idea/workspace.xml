@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Register &amp; Login">
+    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Add Feedbacks">
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Change_Password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Customer/Profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/EcoFurnish_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/EcoFurnish_Project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop_Details.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Store/Shop_Details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Customer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,17 +54,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Template&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Customer",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Customer" />
+      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Static" />
     </key>
@@ -71,7 +74,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
       </set>
     </attachedChunks>
   </component>
@@ -92,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737545304421</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Feedbacks">
+      <option name="closed" value="true" />
+      <created>1737632650813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737632650813</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Register &amp; Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register &amp; Login" />
+    <MESSAGE value="Add Feedbacks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Feedbacks" />
   </component>
 </project>

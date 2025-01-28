@@ -3,15 +3,15 @@
 {% block title %} Home {% endblock %}
 {% block content %}
 
-    <div class="site-blocks-cover" style="background-image: url({% static 'images/hero_1.jpg' %});">
+    <div class="site-blocks-cover" style="background-image: url({% static 'images/img_3.png' %});">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
             <div class="site-block-cover-content text-center">
-              <h2 class="sub-title">Effective Medicine, New Medicine Everyday</h2>
-              <h1>Welcome To Pharma</h1>
+              <h2 class="sub-title" style="color: #d0d3d4;">Effective Medicine, New Medicine Everyday</h2>
+              <h1 style="color:#8b837f;">Welcome To EcoFurnish</h1>
               <p>
-                <a href="#" class="btn btn-primary px-5 py-3">Shop Now</a>
+                <a href="#" class="btn btn-outline-light px-5 py-3">Shop Now</a>
               </p>
             </div>
           </div>
@@ -30,16 +30,21 @@
         </div>
 
         <div class="row">
+          {% for i in product %}
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
             <span class="tag">Sale</span>
-            <a href="shop-single.html"> <img src="{% static 'images/product_01.png' %}" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
-            <p class="price"><del>95.00</del> &mdash; $55.00</p>
+            <a href="shop-single.html"> <img src="{{i.image.url}}" alt="Image" width="250" height="350"></a>
+            <h3 class="text-dark"><a href="shop-single.html">{{i.product}}</a></h3>
+            <div class="price-box mt-2" style="display: inline-block; padding: 5px 10px; border: 1px solid green; border-radius: 5px; background-color: orange; color: black; font-weight: bold;">
+                Rs.{{i.price}}
+            </div>
           </div>
+          {% endfor %}
         </div>
+
         <div class="row mt-5">
           <div class="col-12 text-center">
-            <a href="shop.html" class="btn btn-primary px-4 py-3">View All Products</a>
+            <a href="shop.html" class="btn btn-danger px-4 py-3">View All Products</a>
           </div>
         </div>
       </div>
@@ -47,23 +52,23 @@
 
 
 
-    <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
+    <div class="site-section" style="background-image: url({% static 'images/img.png' %});">
       <div class="container">
         <div class="row align-items-stretch">
           <div class="col-lg-6 mb-5 mb-lg-0">
-            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url({% static 'images/img_1.png' %});">
               <div class="banner-1-inner align-self-center">
-                <h2>Pharma Products</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                <h2 style="color: white;">Pharma Products</h2>
+                <p style="color: white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
             </a>
           </div>
           <div class="col-lg-6 mb-5 mb-lg-0">
-            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url({% static 'images/img_2.png' %});">
               <div class="banner-1-inner ml-auto  align-self-center">
-                <h2>Rated by Experts</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                <h2 style="color: white;">Rated by Experts</h2>
+                <p style="color: white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
             </a>

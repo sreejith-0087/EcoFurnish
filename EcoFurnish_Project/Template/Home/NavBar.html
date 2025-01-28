@@ -19,7 +19,7 @@
       <div class="main-nav d-none d-lg-block">
         <nav class="site-navigation text-right text-md-center" role="navigation">
           <ul class="site-menu js-clone-nav d-none d-lg-block">
-            <li class="active"><a href="{% url 'Store:home' %}">Home</a></li>
+            <li><a href="{% url 'Store:home' %}">Home</a></li>
             <li><a href="{% url 'Store:shop' %}">Store</a></li>
             <li class="has-children">
               <a href="#">Categories</a>
@@ -47,8 +47,9 @@
         </a>
         <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
             class="icon-menu"></span></a>
-        <a href="#"><span class="fa-solid fa-user"></span></a>
+        <a href="{% url 'Customer:profile' %}"><span class="fa-solid fa-user"></span></a>
       </div>
     </div>
   </div>
 </div>
+

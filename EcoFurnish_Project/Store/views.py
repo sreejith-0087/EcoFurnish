@@ -5,11 +5,12 @@ from django.contrib.auth.decorators import login_required
 from .models import Categories, Furniture, Feedback
 from Customer.models import CustomerDetails
 
-
 # Create your views here.
 
 def Home(request):
-    return render(request, 'Home/Index.html')
+    products = Furniture.objects.all()
+    product = products[:3]
+    return render(request, 'Home/Index.html', {'product': product})
 
 def About(request):
     return render(request, 'Home/About.html')

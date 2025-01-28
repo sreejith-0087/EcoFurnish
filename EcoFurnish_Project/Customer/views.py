@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
-from django.template.defaultfilters import first
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
 from .models import CustomerDetails
-
+from . forms import CustomPasswordChangeForm, CustomerDetailsForm
 # Create your views here.
 
 def Register(request):
@@ -80,6 +80,36 @@ def Logout(request):
 
 
 
+@login_required(login_url='Customer:login')
+def Profile(request):
+    customer = get_object_or_404(CustomerDetails, id=request.user)
+    if request.method == "POST":
+        form = CustomerDetailsForm(request.POST, request.FILES, instance=customer)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Profile updated successfully!")
+            return redirect('Customer:profile')
+        else:
+            messages.error(request, "Error updating profile. Please correct the highlighted fields.")
+    else:
+        form = CustomerDetailsForm(instance=customer)
+    return render(request, 'Customer/Profile.html', {'form': form})
 
+
+@login_required(login_url='Customer:login')
+def Change_Password(request):
+    if request.method == 'POST':
+        form = CustomPasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, request.user)
+            messages.success(request, "Your password was successfully updated!")
+            return redirect('Customer:profile')
+        else:
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = CustomPasswordChangeForm(user=request.user)
+
+    return render(request, 'Customer/Change_Password.html', {'form': form})
 
 
