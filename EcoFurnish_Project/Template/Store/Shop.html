@@ -21,9 +21,16 @@
                     <span class="tag">Sale</span>
                     <a href="{% url 'Store:single_details' i.id %}"> <img src="{{i.image.url}}" alt="Image" style="width:250px;height:350px;"></a>
                     <h3 class="text-dark"><a href="{% url 'Store:single_details' i.id %}">{{i.product}}</a></h3>
+
                     <p class="fa-solid fa-cart-flatbed">
+                        {% if i.stock > 0 %}
                         <span style="color: #BB3A3E;">Stock - {{i.stock}}</span>
+                        {% else %}
+                        <span style="color: #BB3A3E;">Out of Stock</span>
+                        {% endif %}
                     </p> <br>
+
+
                     <div class="price-box mt-2" style="display: inline-block; padding: 5px 10px; border: 1px solid green; border-radius: 5px; background-color: orange; color: black; font-weight: bold;">
                         Rs.{{i.price}}
                     </div>
