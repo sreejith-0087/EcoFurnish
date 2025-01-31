@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Index Setting">
+    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Stock Availability Status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738061852159</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Stock Availability Status">
+      <option name="closed" value="true" />
+      <created>1738147963211</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738147963211</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +129,7 @@
     <MESSAGE value="Register &amp; Login" />
     <MESSAGE value="Add Feedbacks" />
     <MESSAGE value="Index Setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Index Setting" />
+    <MESSAGE value="Stock Availability Status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stock Availability Status" />
   </component>
 </project>
