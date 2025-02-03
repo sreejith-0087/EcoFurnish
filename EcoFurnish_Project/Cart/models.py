@@ -1,4 +1,3 @@
-from django.apps.config import MODELS_MODULE_NAME
 from django.db import models
 from Customer.models import CustomerDetails
 from Store.models import Furniture

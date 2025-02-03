@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Stock Availability Status">
+    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Cart Setting">
+      <change beforePath="$PROJECT_DIR$/.idea/EcoFurnish.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EcoFurnish.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +54,15 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Customer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Template&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Customer" />
-      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Static" />
     </key>
   </component>
@@ -111,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738147963211</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cart Setting">
+      <option name="closed" value="true" />
+      <created>1738322069273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738322069273</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +141,7 @@
     <MESSAGE value="Add Feedbacks" />
     <MESSAGE value="Index Setting" />
     <MESSAGE value="Stock Availability Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stock Availability Status" />
+    <MESSAGE value="Cart Setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cart Setting" />
   </component>
 </project>
