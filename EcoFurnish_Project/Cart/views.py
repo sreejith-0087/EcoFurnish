@@ -40,10 +40,29 @@ def Add_Cart(request, product_id):
         )
         cart_item.save()
 
-    return redirect("")
+    return redirect("Cart:cart")
 
 
 
 @login_required(login_url='Customer:login')
-def Cart(request):
-    return render(request, 'Cart/Cart.html')
+def Cart_Details(request, total=0, counter=0, cart_items=0):
+    try:
+        cart = Cart.objects.get(user=request.user.id)
+        cart_items = CartItem.objects.filter(cart=cart, active=True)
+        for i in cart_items:
+            total += (i.product.price * i.quantity)
+            counter += i.quantity
+    except ObjectDoesNotExist:
+        pass
+    return render(request, 'Cart/Cart.html', dict(cart_items=cart_items, total=total, counter=counter))
+
+
+
+
+
+
+
+
+
+
+

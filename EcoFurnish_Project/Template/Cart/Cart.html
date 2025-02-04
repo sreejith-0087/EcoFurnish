@@ -31,14 +31,15 @@
                   </tr>
                 </thead>
                 <tbody>
+                {% for i in cart_items %}
                   <tr>
                     <td class="product-thumbnail">
-                      <img src="images/product_02.png" alt="Image" class="img-fluid">
+                      <img src="{{i.product.image.url}}" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Ibuprofen</h2>
+                      <h2 class="h5 text-black">{{i.product.product}}</h2>
                     </td>
-                    <td>$55.00</td>
+                    <td>Rs.{{i.product.price}}</td>
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
@@ -52,10 +53,10 @@
                       </div>
 
                     </td>
-                    <td>$49.00</td>
+                    <td>{{i.subtotal}}</td>
                     <td><a href="#" class="btn btn-danger height-auto btn-sm">X</a></td>
                   </tr>
-
+                {% endfor %}
                 </tbody>
               </table>
             </div>
@@ -66,7 +67,9 @@
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6">
-                <button class="btn btn-outline-primary btn-md btn-block">Continue Shopping</button>
+                <a href="{% url 'Store:shop' %}">
+                  <button class="btn btn-outline-primary btn-md btn-block">Continue Shopping</button>
+                </a>
               </div>
             </div>
           </div>
@@ -80,26 +83,19 @@
                     <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <span class="text-black">Subtotal</span>
-                  </div>
-                  <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
-                  </div>
-                </div>
+
                 <div class="row mb-5">
                   <div class="col-md-6">
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong class="text-black">Rs.{{total}}</strong>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To
+                    <button class="btn btn-warning btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To
                       Checkout</button>
                   </div>
                 </div>

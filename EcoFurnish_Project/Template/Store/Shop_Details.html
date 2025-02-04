@@ -29,7 +29,7 @@
             <p><strong class="text h4" style="font-family: serif; color:#2A8737;">Rs.{{pro.price}}</strong></p>
 
             {% if pro.stock > 0 %}
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
+            <p><a href="{% url 'Cart:add_cart' pro.id %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-warning">Add To Cart</a></p>
             {% else %}
             <p><a href="#" class="buy-now btn btn-sm height-auto px-4 py-3 btn-dark">Out of Stock</a></p>
             {% endif %}
