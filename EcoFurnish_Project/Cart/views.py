@@ -1,3 +1,5 @@
+from itertools import product
+
 from django.shortcuts import render, redirect, get_object_or_404
 from Customer.models import CustomerDetails
 from Store.models import Furniture
@@ -57,7 +59,37 @@ def Cart_Details(request, total=0, counter=0, cart_items=0):
     return render(request, 'Cart/Cart.html', dict(cart_items=cart_items, total=total, counter=counter))
 
 
+@login_required(login_url='Customer:login')
+def Full_Remove(request, product_id):
+    cart = Cart.objects.get(user=request.user.id)
+    product = get_object_or_404(Furniture, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    cart_item.delete()
+    return redirect('Cart:cart')
 
+
+@login_required(login_url='Customer:login')
+def Cart_Remove(request, product_id):
+    cart = Cart.objects.get(user=request.user.id)
+    product = get_object_or_404(Furniture, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    if cart_item.quantity > 1:
+        cart_item.quantity -= 1
+        cart_item.save()
+    else:
+        cart_item.delete()
+    return redirect('Cart:cart')
+
+
+def Checkout(request, total=0, counter=0):
+    user = CustomerDetails.objects.get(id=request.user.id)
+    cart = Cart.objects.get(user=request.user.id)
+    cart_item = CartItem.objects.filter(cart=cart, active=True)
+    for i in cart_item:
+        total =+ (i.product.price * i.quantity)
+        counter += i.quantity
+    return render(request, 'Cart/Checkout.html', {'cart_item':cart_item, 'total':total,
+                                                  'user_details':user, 'cart_id':cart.id, 'counter': counter})
 
 
 

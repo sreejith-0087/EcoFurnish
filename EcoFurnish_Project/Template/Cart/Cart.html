@@ -43,18 +43,22 @@
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
-                          <button class="btn btn-outline-danger js-btn-minus" type="button">&minus;</button>
+                          <a href="{% url 'Cart:cart_remove' i.product.id %}">
+                            <button class="btn btn-outline-danger" type="button" >&minus;</button>
+                          </a>
                         </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder=""
+                        <input type="text" class="form-control text-center" value="{{i.quantity}}" placeholder=""
                           aria-label="Example text with button addon" aria-describedby="button-addon1">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-success js-btn-plus" type="button">&plus;</button>
+                          <a href="{% url 'Cart:add_cart' i.product.id %}">
+                            <button class="btn btn-outline-success" type="button">&plus;</button>
+                          </a>
                         </div>
                       </div>
 
                     </td>
                     <td>{{i.subtotal}}</td>
-                    <td><a href="#" class="btn btn-danger height-auto btn-sm">X</a></td>
+                    <td><a href="{% url 'Cart:full_remove' i.product.id %}" class="btn btn-danger height-auto btn-sm">X</a></td>
                   </tr>
                 {% endfor %}
                 </tbody>
@@ -95,7 +99,7 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-warning btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To
+                    <button class="btn btn-warning btn-lg btn-block" onclick="window.location='{% url 'Cart:checkout' %}'">Proceed To
                       Checkout</button>
                   </div>
                 </div>
