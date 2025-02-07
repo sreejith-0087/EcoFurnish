@@ -37,42 +37,43 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black">Company Name </label>
-                  <input type="text" class="form-control" id="c_companyname" name="c_companyname">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
                   <label for="c_address" class="text-black">Address <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Street address">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="c_state_country" class="text-black">State / Country <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_state_country" name="c_state_country">
-                </div>
-                <div class="col-md-6">
-                  <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
+                  <textarea class="form-control" id="c_address" name="c_address" placeholder="Address" required>
+                  </textarea>
                 </div>
               </div>
 
               <div class="form-group row mb-5">
                 <div class="col-md-6">
                   <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_email_address" name="c_email_address">
+                  <input type="text" class="form-control" id="c_email_address" name="c_email_address" value="{{user_details.id}}" readonly>
                 </div>
                 <div class="col-md-6">
                   <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
+                  <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number" value="{{user_details.phone}}" readonly>
                 </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control" id="c_postal_zip" name="c_postal_zip" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="payment_option" class="text-black">Select Payment Option</label>
+                <select class="form-control" id="payment_option" name="payment_option">
+                  <option disabled selected>--Select--</option>
+                  <option value="1">Cash on Delivery</option>
+                  <option value="2">Card Payment</option>
+                  <option>Online Payment</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
+                  Order</button>
               </div>
 
             </form>
@@ -91,30 +92,19 @@
                       <th>Total</th>
                     </thead>
                     <tbody>
+                    {% for i in cart_item %}
                       <tr>
-                        <td>Bioderma <strong class="mx-2">x</strong> 1</td>
-                        <td>$55.00</td>
+                        <td>{{i.product.product}} <strong class="mx-2">x</strong> 1</td>
+                        <td>Rs.{{i.sub_total}}</td>
                       </tr>
-                      <tr>
-                        <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
-                        <td>$45.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$350.00</td>
-                      </tr>
+                    {% endfor %}
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                        <td class="text-black font-weight-bold"><strong>{{total}}</strong></td>
                       </tr>
                     </tbody>
                   </table>
 
-
-                  <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
-                      Order</button>
-                  </div>
 
                 </div>
               </div>

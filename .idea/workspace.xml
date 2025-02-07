@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Cart Setting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Checkout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
