@@ -10,4 +10,5 @@ urlpatterns = [
     path('full_remove/<int:product_id>', Full_Remove, name='full_remove'),
     path('cart_remove/<int:product_id>', Cart_Remove, name='cart_remove'),
     path('checkout/', Checkout, name='checkout'),
+    path('placeorder/', PlaceOrder, name='placeorder'),
 ]

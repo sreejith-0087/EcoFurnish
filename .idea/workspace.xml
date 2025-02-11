@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Cart Setting">
+    <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Payment">
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Thankyou.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,17 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Template&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Template/Cart",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Cart" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Customer" />
@@ -130,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738667950940</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Payment">
+      <option name="closed" value="true" />
+      <created>1739245436996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739245436996</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +161,7 @@
     <MESSAGE value="Index Setting" />
     <MESSAGE value="Stock Availability Status" />
     <MESSAGE value="Cart Setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cart Setting" />
+    <MESSAGE value="Payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Payment" />
   </component>
 </project>

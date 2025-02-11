@@ -22,7 +22,7 @@
           <div class="col-md-6 mb-5 mb-md-0">
             <h2 class="h3 mb-3 text-black">Billing Details</h2>
             <div class="p-3 p-lg-5 border">
-            <form method="post" action="#">
+            <form method="post" action="{% url 'Cart:placeorder' %}">
                 {% csrf_token %}
               <div class="form-group row">
                 <div class="col-md-6">
@@ -72,7 +72,7 @@
               </div>
 
               <div class="form-group">
-                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
+                <button class="btn btn-primary btn-lg btn-block" onclick="headlePayment()">Place
                   Order</button>
               </div>
 

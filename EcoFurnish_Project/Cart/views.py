@@ -1,4 +1,3 @@
-from statistics import quantiles
 
 from django.shortcuts import render, redirect, get_object_or_404
 from Customer.models import CustomerDetails
@@ -132,11 +131,8 @@ def PlaceOrder(request):
         cart_item.delete()
 
         if type == '1':
-            return render(request, )
+            return render(request, 'Cart/Thankyou.html')
         else:
-            return redirect()
-
-
-
-
+            return redirect('')
+    return HttpResponseNotAllowed(['POST'])
 
