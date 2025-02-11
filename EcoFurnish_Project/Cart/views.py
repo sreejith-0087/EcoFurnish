@@ -1,4 +1,4 @@
-from itertools import product
+from statistics import quantiles
 
 from django.shortcuts import render, redirect, get_object_or_404
 from Customer.models import CustomerDetails
@@ -81,6 +81,8 @@ def Cart_Remove(request, product_id):
     return redirect('Cart:cart')
 
 
+
+@login_required(login_url='Customer:login')
 def Checkout(request, total=0, counter=0):
     user = CustomerDetails.objects.get(id=request.user.id)
     cart = Cart.objects.get(user=request.user.id)
@@ -93,6 +95,46 @@ def Checkout(request, total=0, counter=0):
 
 
 
+@login_required(login_url='Customer:login')
+def PlaceOrder(request):
+    if request.method == 'POST':
+        add = request.POST['c_address']
+        pin = request.POST['c_postal_zip']
+        type = request.POST['payment_option']
+
+        user_details = CustomerDetails.objects.get(id=request.user.id)
+        cart = Cart.objects.get(user=request.user.id)
+
+        total_amount = 0
+
+        order = Order.objects.create(user=user_details,
+                                     cart_id=cart,
+                                     address=add,
+                                     postal_zip=pin,
+                                     payment_type=type,
+                                     payment_status=False)
+        order.save()
+
+        cart_item = CartItem.objects.filter(cart=cart, active=True)
+        for i in cart_item:
+            product = i.product
+            product.stock -= i.quantity
+            product.save()
+
+            total_amount += (product.price * i.quantity)
+
+            ProductOrder.objects.create(order=order, product=product, quantity=i.quantity,
+                                        product_total=product.price * i.quantity)
+
+        order.amount = total_amount
+        order.save()
+
+        cart_item.delete()
+
+        if type == '1':
+            return render(request, )
+        else:
+            return redirect()
 
 
 
