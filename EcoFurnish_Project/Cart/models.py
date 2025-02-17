@@ -62,9 +62,13 @@ class ProductOrder(models.Model):
         return f'Order {self.order} Product: {self.product} Quantity: {self.quantity}'
 
 
-
-
-
-
-
-
+class Payment(models.Model):
+    user = models.ForeignKey(CustomerDetails, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    card_number = models.CharField(max_length=25)
+    name = models.CharField(max_length=25)
+    expiry_month = models.CharField(max_length=2)
+    expiry_year = models.CharField(max_length=2)
+    cvv = models.CharField(max_length=3)
+    def __str__(self):
+        return f'Payment for {self.user}'

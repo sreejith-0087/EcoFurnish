@@ -133,6 +133,34 @@ def PlaceOrder(request):
         if type == '1':
             return render(request, 'Cart/Thankyou.html')
         else:
-            return redirect('')
+            return redirect('Cart:card_payment', order.id)
     return HttpResponseNotAllowed(['POST'])
 
+
+@login_required(login_url='Customer:login')
+def Card_Payment(request, order_id):
+    if request.method == 'POST':
+        card_number = request.POST.get('card_number')
+        name = request.POST.get('card_name')
+        expiry_month = request.POST.get('expiry_month')
+        expiry_year = request.POST.get('expiry_year')
+        cvv = request.POST.get('cvv')
+
+        user_details = CustomerDetails.objects.get(id=request.user.id)
+        order = Order.objects.get(id=order_id)
+
+        pay = Payment(
+            user=user_details,
+            order=order,
+            card_number=card_number,
+            name=name,
+            expiry_month=expiry_month,
+            expiry_year=expiry_year,
+            cvv=cvv
+        )
+        pay.save()
+        order.payment_status = True
+        order.save()
+
+        return render(request, 'Cart/Thankyou.html')
+    return render(request, 'Cart/Card_Payment.html')
