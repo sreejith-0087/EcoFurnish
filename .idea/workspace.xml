@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Cash on Delivery">
-      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Card_Payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Static/css/order_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/View_Order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Base.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +57,9 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/PycharmProjects/EcoFurnish/EcoFurnish_Project/Template/Cart&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sreej/Downloads/EcoFurnish/EcoFurnish&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -68,11 +71,14 @@
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Customer" />
       <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Static" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sreej\PycharmProjects\EcoFurnish\EcoFurnish_Project\Template\Cart" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+        <option value="bundled-python-sdk-fc1d50d2d915-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.24978.54" />
       </set>
     </attachedChunks>
   </component>

@@ -1,0 +1,55 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.imgs {
+    width: 100px;
+    height: 100px;
+}
+
+.product-name {
+    color: #56774F;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: #344636;
+}
+
+.paid {
+    color: green;
+}
+
+.not-paid {
+    color: red;
+}
+
+.delivered {
+    color: green;
+}
+
+.not-delivered {
+    color: red;
+}
+
+#confirmation-container {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}

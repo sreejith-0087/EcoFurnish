@@ -30,6 +30,7 @@
               </ul>
             </li>
             {% if user.is_authenticated %}
+            <li><a href="{% url 'Cart:order_view' %}">View Order</a></li>
             <li><a href="{% url 'Customer:logout' %}">Logout</a></li>
             {% else %}
             <li><a href="{% url 'Customer:register' %}">Register</a></li>

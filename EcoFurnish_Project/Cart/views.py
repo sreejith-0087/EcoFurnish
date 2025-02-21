@@ -164,3 +164,11 @@ def Card_Payment(request, order_id):
 
         return render(request, 'Cart/Thankyou.html')
     return render(request, 'Cart/Card_Payment.html')
+
+@login_required(login_url='Customer:login')
+def Order_View(request):
+    cod_order = Order.objects.filter(user=request.user.id)
+    order_products = ProductOrder.objects.filter(order__in=cod_order).order_by('-order__date_time')
+
+    return render(request, 'Cart/View_Order.html', {'order_items': order_products})
+

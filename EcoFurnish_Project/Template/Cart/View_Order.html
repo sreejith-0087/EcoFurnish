@@ -1,0 +1,74 @@
+{% extends 'Home/Base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock %}
+{% block content %}
+
+    <div id="confirmation-container">
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h2 class="btn btn-success px-3 py-3">Your Order Details</h2>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Date & Time</th>
+                <th>Payment Mode</th>
+                <th>Address</th>
+                <th>Online <br> Payment Status</th>
+                <th>Delivery Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in order_items %}
+            <tr>
+                <td>
+                    <a href="#"><img src="{{i.product.image.url}}" alt="image" class="imgs"></a>
+                </td>
+                <td>
+                    <h3><a href="#" class="product-name">{{i.product.product}}</a></h3>
+                </td>
+                <td>
+                    <p class="price">{{i.quantity}}</p>
+                </td>
+                <td>
+                    <p class="price">Rs.{{i.product_total}}</p>
+                </td>
+                <td>
+                    <p style="color:#CA9653;">Rs.{{i.order.date_time}}</p>
+                </td>
+                <td>
+                    <p style="color:#BEBE28;">{{i.order.get_payment_type_display}}</p>
+                </td>
+                <td>
+                    <p style="color:#BEBE20;">{{i.order.address}}</p>
+                </td>
+                <td>
+                    {% if i.order.payment_status %}
+                    <p class="paid">Paid</p>
+                    {% else %}
+                    {% if i.order.payment_type != 1 %}
+                    <p class="not-paid">Payment Failed</p>
+                    {% endif %}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if i.order.delivery_status %}
+                    <p class="delivered">Delivered</p>
+                    {% else %}
+                    <p class="not-delivered">Not Delivery</p>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
