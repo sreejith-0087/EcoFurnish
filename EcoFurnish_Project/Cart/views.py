@@ -169,6 +169,15 @@ def Card_Payment(request, order_id):
 def Order_View(request):
     cod_order = Order.objects.filter(user=request.user.id)
     order_products = ProductOrder.objects.filter(order__in=cod_order).order_by('-order__date_time')
+    paginator = Paginator(order_products, 5)
+    page = request.GET.get('page')
 
-    return render(request, 'Cart/View_Order.html', {'order_items': order_products})
+    try:
+        order_items = paginator.page(page)
+    except EmptyPage:
+        order_items = paginator.page(paginator.num_pages)
+    except PageNotAnInteger:
+        order_items = paginator.page(1)
+
+    return render(request, 'Cart/View_Order.html', {'order_items': order_items})
 

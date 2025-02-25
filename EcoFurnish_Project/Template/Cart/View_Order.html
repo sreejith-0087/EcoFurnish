@@ -70,5 +70,35 @@
         </tbody>
     </table>
 
+    <div class="pagination justify-content-center">
+        {% if order_items.paginator.num_pages > 1 %}
+        <ul class="pagination">
+            {% if order_items.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1"> First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{order_items.previous_page_number}}">Previous</a>
+                </li>
+            {% endif %}
+
+            {% for num in order_items.paginator.page_range %}
+                <li class="page-item {% if num == order_items.number %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+            {% endfor %}
+
+            {% if order_items.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ order_items.next_page_number }}">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ order_items.paginator.num_pages }}">Last</a>
+                </li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+
 {% endblock %}
 

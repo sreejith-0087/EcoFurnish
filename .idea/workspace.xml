@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60f64a44-74e5-4904-80bf-aa8790b0751c" name="Changes" comment="Cash on Delivery">
-      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Static/css/order_view.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/View_Order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Base.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/NavBar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Thankyou.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/Thankyou.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/View_Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Cart/View_Order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/Template/Home/Footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EcoFurnish_Project/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
